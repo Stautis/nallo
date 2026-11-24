@@ -4,6 +4,7 @@ include { SAWFISH   } from '../sawfish/main'
 include { SEVERUS   } from '../severus/main'
 include { SNIFFLES1 } from '../sniffles1/main'
 include { SNIFFLES  } from '../sniffles/main'
+include { SNIFFLES as SNIFFLES_JOINT } from '../snifflesJoint/main'
 
 workflow CALL_SVS {
     take:
@@ -23,12 +24,39 @@ workflow CALL_SVS {
     ch_sv_calls = channel.empty()
 
     if (sv_callers_to_run.contains('sniffles')) {
+        ch_family_counts = ch_bam_bai
+            .map { meta, _bam, _bai -> [meta.family_id, meta.id] }
+            .groupTuple()
+            .map { family_id, sample_ids -> [family_id, sample_ids.unique().size()] }
+
+        ch_bams = ch_bam_bai
+            .map { meta, bam, bai -> [meta.family_id, meta, bam, bai] }
+            .combine(ch_family_counts, by: 0)
+
+        ch_bams_branched = ch_bams.branch { _family_id, _meta, _bam, _bai, family_size ->
+            single: family_size == 1
+            joint: family_size > 1
+        }
+
         SNIFFLES(
-            ch_bam_bai,
+            ch_bams_branched.single.map { _family_id, meta, bam, bai, _family_size ->
+                [meta, bam, bai]
+            },
             ch_fasta,
             ch_tandem_repeats,
         )
-        ch_sv_calls = ch_sv_calls.mix(SNIFFLES.out.vcf.map { meta, vcf -> [meta, vcf, []] })
+
+        SNIFFLES_JOINT(
+            ch_bams_branched.joint.map { _family_id, meta, bam, bai, _family_size ->
+                [meta, bam, bai]
+            },
+            ch_fasta,
+            ch_tandem_repeats,
+        )
+
+        ch_sv_calls = ch_sv_calls
+            .mix(SNIFFLES.out.vcf.map { meta, vcf -> [meta, vcf, []] })
+            .mix(SNIFFLES_JOINT.out.vcf.map { meta, vcf -> [meta, vcf, []]})
     }
 
     if (sv_callers_to_run.contains('sniffles1')) {
