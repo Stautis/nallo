@@ -1,0 +1,90 @@
+nextflow_workflow {
+
+    name "Test Workflow SNIFFLES"
+    script "../main.nf"
+    config "./nextflow.config"
+    workflow "SNIFFLES"
+
+    test("3 samples - stub") {
+        options '-stub'
+
+        when {
+            workflow {
+                """
+                input[0] = channel.of(
+                    [
+                        [ id: 'HG002_Revio', family_id:'FAM', paternal_id:'HG004', sex:0, maternal_id:'HG003', phenotype:2, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG002_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG002_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                    [
+                        [ id: 'HG003_Revio', family_id:'FAM', paternal_id:0, maternal_id:0, sex:0, phenotype:1, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG003_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG003_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                    [
+                        [ id: 'HG004_Revio', family_id:'FAM', paternal_id:0, maternal_id:0, sex:0, phenotype:1, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG004_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG004_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                )
+                input[1] = channel.value([
+                    [ id: 'genome' ],
+                    file(params.pipelines_testdata_base_path + 'reference/hg38.test.fa', checkIfExists: true)
+                ])
+                input[2] = [[],[]]
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                { assert workflow.success },
+                { assert snapshot(
+                    workflow.out.vcf.collect { meta, vcf -> [meta, file(vcf).name] }
+                ).match() }
+            )
+        }
+    }
+
+    test("3 samples") {
+        when {
+            workflow {
+                """
+                input[0] = channel.of(
+                    [
+                        [ id: 'HG002_Revio', family_id:'FAM', paternal_id:'HG004', sex:0, maternal_id:'HG003', phenotype:2, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG002_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG002_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                    [
+                        [ id: 'HG003_Revio', family_id:'FAM', paternal_id:0, maternal_id:0, sex:0, phenotype:1, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG003_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG003_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                    [
+                        [ id: 'HG004_Revio', family_id:'FAM', paternal_id:0, maternal_id:0, sex:0, phenotype:1, project:'test', n_files:1, single_end:true ],
+                        file(params.pipelines_testdata_base_path + 'testdata/HG004_PacBio_Revio.bam', checkIfExists: true),
+                        file(params.pipelines_testdata_base_path + 'testdata/HG004_PacBio_Revio.bam.bai', checkIfExists: true)
+                    ],
+                )
+                input[1] = channel.value([
+                    [ id: 'genome' ],
+                    file(params.pipelines_testdata_base_path + 'reference/hg38.test.fa', checkIfExists: true)
+                ])
+                input[2] = [[],[]]
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                { assert workflow.success },
+                { assert snapshot(
+                    workflow.out.vcf.collect { meta, vcf -> [meta, path(vcf).vcf.variantsMD5] }
+                ).match() }
+            )
+        }
+    }
+
+}

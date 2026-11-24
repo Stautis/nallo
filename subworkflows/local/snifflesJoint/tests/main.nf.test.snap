@@ -1,0 +1,54 @@
+{
+    "3 samples": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "FAM",
+                        "family_id": "FAM",
+                        "sample_ids": [
+                            "HG002_Revio",
+                            "HG003_Revio",
+                            "HG004_Revio"
+                        ],
+                        "sv_caller": "sniffles",
+                        "needs_reheader": true,
+                        "skip_vep_prep": false
+                    },
+                    "beb851c92dcdaacf205d4de8a7ce3079"
+                ]
+            ]
+        ],
+        "timestamp": "2026-11-24T11:56:32.793461648",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.10.6"
+        }
+    },
+    "3 samples - stub": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "FAM",
+                        "family_id": "FAM",
+                        "sample_ids": [
+                            "HG002_Revio",
+                            "HG003_Revio",
+                            "HG004_Revio"
+                        ],
+                        "sv_caller": "sniffles",
+                        "needs_reheader": true,
+                        "skip_vep_prep": false
+                    },
+                    "FAM.vcf.gz"
+                ]
+            ]
+        ],
+        "timestamp": "2026-11-19T13:42:33.447178681",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.10.6"
+        }
+    }
+}
