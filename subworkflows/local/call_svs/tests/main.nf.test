@@ -297,7 +297,7 @@ nextflow_workflow {
 
     }
 
-    test("2 samples, 1 family - sniffes,severus,hificnv,sawfish with trf bed") {
+    test("2 samples, 1 family - sniffles,severus,hificnv,sawfish with trf bed") {
 
         when {
             workflow {
@@ -528,7 +528,7 @@ nextflow_workflow {
         }
     }
 
-    test("2 samples, 1 family - sniffes,severus,debreak with trf bed, run all callers - stub") {
+    test("2 samples, 1 family - sniffles,severus,debreak with trf bed, run all callers - stub") {
 
         options "-stub"
 
