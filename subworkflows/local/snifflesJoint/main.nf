@@ -9,7 +9,7 @@ workflow SNIFFLES {
 
     main:
     RUN_SNIFFLES(
-        ch_bam_bai,
+        ch_bam_bai.map { meta, bam, bai -> [meta, bam, bai, [], []] },
         ch_fasta,
         ch_tandem_repeats,
         false,
@@ -30,7 +30,7 @@ workflow SNIFFLES {
         }
 
     RUN_SNIFFLES_JOINT(
-        ch_family_snfs.map { meta, snfs -> [meta, snfs, []] },
+        ch_family_snfs.map { meta, snfs -> [meta, snfs, [], [], []] },
         ch_fasta,
         ch_tandem_repeats,
         true,

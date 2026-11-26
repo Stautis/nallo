@@ -151,9 +151,9 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_1_hificnv.test_1.vcf.gz"
+                        "test_1_tabix_hificnv.vcf.gz"
                     ],
-                    "test_1_hificnv.test_1.vcf.gz.tbi"
+                    "test_1_tabix_hificnv.vcf.gz.tbi"
                 ],
                 [
                     "sv_calls_indexed:",
@@ -167,13 +167,13 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_2_hificnv.test_2.vcf.gz"
+                        "test_2_tabix_hificnv.vcf.gz"
                     ],
-                    "test_2_hificnv.test_2.vcf.gz.tbi"
+                    "test_2_tabix_hificnv.vcf.gz.tbi"
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T09:43:13.197292024",
+        "timestamp": "2026-11-26T13:14:38.381971811",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -185,7 +185,9 @@
                 [
                     "sv_calls_raw:",
                     {
-                        "id": "test",
+                        "id": [
+                            "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                        ],
                         "single_end": false,
                         "family_id": "family",
                         "sex": 1,
@@ -196,15 +198,15 @@
                     [
                         "test.vcf.gz",
                         "VcfFile [chromosomes=[chrX, chr16], sampleCount=1, variantCount=58, phased=false, phasedAutodetect=false]",
-                        "18d7f9a70df36051aff4f5d46e4beea1"
+                        "99087db0a472a426af6d931d7e48da4a"
                     ]
                 ]
             ]
         ],
-        "timestamp": "2026-09-11T06:52:39.021766457",
+        "timestamp": "2026-11-17T13:29:30.374552487",
         "meta": {
             "nf-test": "0.9.5",
-            "nextflow": "26.04.6"
+            "nextflow": "26.10.4"
         }
     },
     "1 sample, 1 family - sawfish": {
@@ -261,9 +263,9 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_1_hificnv.test_1.vcf.gz"
+                        "test_1_tabix_hificnv.vcf.gz"
                     ],
-                    "test_1_hificnv.test_1.vcf.gz.tbi"
+                    "test_1_tabix_hificnv.vcf.gz.tbi"
                 ],
                 [
                     "sv_calls_indexed:",
@@ -277,16 +279,16 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_2_hificnv.test_2.vcf.gz"
+                        "test_2_tabix_hificnv.vcf.gz"
                     ],
-                    "test_2_hificnv.test_2.vcf.gz.tbi"
+                    "test_2_tabix_hificnv.vcf.gz.tbi"
                 ]
             ]
         ],
-        "timestamp": "2026-09-11T06:56:47.057661256",
+        "timestamp": "2026-11-17T13:50:19.813834465",
         "meta": {
             "nf-test": "0.9.5",
-            "nextflow": "26.04.6"
+            "nextflow": "26.10.4"
         }
     },
     "1 sample, 1 family - debreak": {
@@ -295,7 +297,9 @@
                 [
                     "sv_calls_raw:",
                     {
-                        "id": "test",
+                        "id": [
+                            "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                        ],
                         "single_end": false,
                         "family_id": "family",
                         "sex": 1,
@@ -421,9 +425,9 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_1_hificnv.test_1.vcf.gz"
+                        "test_1_tabix_hificnv.vcf.gz"
                     ],
-                    "test_1_hificnv.test_1.vcf.gz.tbi"
+                    "test_1_tabix_hificnv.vcf.gz.tbi"
                 ],
                 [
                     "sv_calls_indexed:",
@@ -453,9 +457,9 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_2_hificnv.test_2.vcf.gz"
+                        "test_2_tabix_hificnv.vcf.gz"
                     ],
-                    "test_2_hificnv.test_2.vcf.gz.tbi"
+                    "test_2_tabix_hificnv.vcf.gz.tbi"
                 ],
                 [
                     "sv_calls_indexed:",
@@ -475,7 +479,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T10:51:14.951127267",
+        "timestamp": "2026-11-26T13:17:32.916497817",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -487,7 +491,9 @@
                 [
                     "sv_calls_raw:",
                     {
-                        "id": "test",
+                        "id": [
+                            "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                        ],
                         "single_end": false,
                         "family_id": "family",
                         "sex": 1,
@@ -555,8 +561,8 @@
                             "needs_reheader": false,
                             "skip_vep_prep": true
                         },
-                        "test_1_hificnv.vcf.gz",
-                        "test_1_hificnv.vcf.gz.tbi"
+                        "test_1_tabix_hificnv.vcf.gz",
+                        "test_1_tabix_hificnv.vcf.gz.tbi"
                     ],
                     [
                         {
@@ -598,8 +604,8 @@
                             "needs_reheader": false,
                             "skip_vep_prep": true
                         },
-                        "test_2_hificnv.vcf.gz",
-                        "test_2_hificnv.vcf.gz.tbi"
+                        "test_2_tabix_hificnv.vcf.gz",
+                        "test_2_tabix_hificnv.vcf.gz.tbi"
                     ],
                     [
                         {
@@ -691,7 +697,7 @@
                 ]
             }
         ],
-        "timestamp": "2026-11-24T10:05:01.851590189",
+        "timestamp": "2026-11-26T13:19:05.528298857",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -781,9 +787,9 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_1_hificnv.test_1.vcf.gz"
+                        "test_1_tabix_hificnv.vcf.gz"
                     ],
-                    "test_1_hificnv.test_1.vcf.gz.tbi"
+                    "test_1_tabix_hificnv.vcf.gz.tbi"
                 ],
                 [
                     "sv_calls_indexed:",
@@ -797,13 +803,13 @@
                         "skip_vep_prep": true
                     },
                     [
-                        "test_2_hificnv.test_2.vcf.gz"
+                        "test_2_tabix_hificnv.vcf.gz"
                     ],
-                    "test_2_hificnv.test_2.vcf.gz.tbi"
+                    "test_2_tabix_hificnv.vcf.gz.tbi"
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T08:56:35.472306146",
+        "timestamp": "2026-11-26T13:09:36.989641624",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -864,7 +870,9 @@
                 "sawfish_depth_bw": [
                     [
                         {
-                            "id": "test",
+                            "id": [
+                                "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                            ],
                             "family_id": "family"
                         },
                         "depth.bw:md5,d41d8cd98f00b204e9800998ecf8427e"
@@ -873,7 +881,9 @@
                 "sawfish_copynum_bedgraph": [
                     [
                         {
-                            "id": "test",
+                            "id": [
+                                "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                            ],
                             "family_id": "family"
                         },
                         "copynum.bedgraph:md5,d41d8cd98f00b204e9800998ecf8427e"
@@ -882,7 +892,9 @@
                 "sawfish_gc_bias_corrected_depth_bw": [
                     [
                         {
-                            "id": "test",
+                            "id": [
+                                "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                            ],
                             "family_id": "family"
                         },
                         "gc_bias_corrected_depth.bw:md5,d41d8cd98f00b204e9800998ecf8427e"
@@ -891,7 +903,9 @@
                 "sawfish_maf_bw": [
                     [
                         {
-                            "id": "test",
+                            "id": [
+                                "HG002_Revio.bam:md5,f410abffb6583ae4d650f804e33f0e03"
+                            ],
                             "family_id": "family"
                         },
                         "maf.bw:md5,d41d8cd98f00b204e9800998ecf8427e"
