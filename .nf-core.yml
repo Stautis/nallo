@@ -47,4 +47,8 @@ template:
   skip_features:
     - igenomes
     - fastqc
+<<<<<<< HEAD
   version: 0.13.0
+=======
+  version: 0.12.2
+>>>>>>> 2b8996b4 (Patch release 0.12.2 (#1223))
