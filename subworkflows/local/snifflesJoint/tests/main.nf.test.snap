@@ -13,13 +13,14 @@
                         ],
                         "sv_caller": "sniffles",
                         "needs_reheader": false,
+                        "needs_header_repair": true,
                         "skip_vep_prep": false
                     },
                     "beb851c92dcdaacf205d4de8a7ce3079"
                 ]
             ]
         ],
-        "timestamp": "2026-11-27T10:29:44.26913389",
+        "timestamp": "2026-11-27T13:09:45.82391808",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -39,13 +40,14 @@
                         ],
                         "sv_caller": "sniffles",
                         "needs_reheader": false,
+                        "needs_header_repair": true,
                         "skip_vep_prep": false
                     },
                     "FAM.vcf.gz"
                 ]
             ]
         ],
-        "timestamp": "2026-11-27T10:29:27.047574895",
+        "timestamp": "2026-11-27T13:09:28.589281113",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
