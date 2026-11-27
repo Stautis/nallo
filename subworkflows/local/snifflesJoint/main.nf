@@ -38,5 +38,5 @@ workflow SNIFFLES {
     )
 
     emit:
-    vcf = RUN_SNIFFLES_JOINT.out.vcf.map { meta, vcf -> [meta + [sv_caller: 'sniffles', needs_reheader: true, skip_vep_prep: false], vcf] } // channel: [ val(meta), path(vcf) ]
+    vcf = RUN_SNIFFLES_JOINT.out.vcf.map { meta, vcf -> [meta + [sv_caller: 'sniffles', needs_reheader: false, skip_vep_prep: false], vcf] } // channel: [ val(meta), path(vcf) ]
 }
