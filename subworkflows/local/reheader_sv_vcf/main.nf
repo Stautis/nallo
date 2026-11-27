@@ -13,7 +13,8 @@ workflow REHEADER_SV_VCF {
     // stamped by each per-caller subworkflow (SNIFFLES, SEVERUS, etc.).
     ch_vcf_reheader = ch_vcf_tbi.branch { meta, _vcf, _tbi ->
         reheader: meta.needs_reheader
-        no_reheader: !meta.needs_reheader
+        header_repair: meta.needs_header_repair
+        no_reheader: !meta.needs_reheader && !meta.needs_header_repair
     }
 
     // Getting the sample name from the VCFs that need reheadering
@@ -34,6 +35,7 @@ workflow REHEADER_SV_VCF {
     ch_bcftools_reheader_input = ch_vcf_reheader.reheader
         .join(CREATE_SAMPLES_FILE.out.output, failOnMismatch: true, failOnDuplicate: true)
         .map { meta, vcf, _tbi, samples -> [meta, vcf, [], samples] }
+        .mix(ch_vcf_reheader.header_repair.map {meta, vcf, _tbi -> [meta, vcf, [], []] })
 
     /*
      * Finally, reheader the VCF with meta.id as the sample name,
