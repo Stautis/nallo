@@ -13,6 +13,7 @@
                         ],
                         "sv_caller": "sniffles",
                         "needs_reheader": false,
+                        "needs_header_repair": true,
                         "skip_vep_prep": false
                     },
                     [
@@ -173,7 +174,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-27T10:42:09.740433215",
+        "timestamp": "2026-11-27T13:18:09.92661211",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -335,6 +336,7 @@
                         ],
                         "sv_caller": "sniffles",
                         "needs_reheader": false,
+                        "needs_header_repair": true,
                         "skip_vep_prep": false
                     },
                     [
@@ -479,7 +481,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-27T10:43:16.315072969",
+        "timestamp": "2026-11-27T13:19:16.673014078",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -529,6 +531,7 @@
                             ],
                             "sv_caller": "sniffles",
                             "needs_reheader": false,
+                            "needs_header_repair": true,
                             "skip_vep_prep": false
                         },
                         "family.vcf.gz",
@@ -697,7 +700,7 @@
                 ]
             }
         ],
-        "timestamp": "2026-11-27T10:43:37.878907303",
+        "timestamp": "2026-11-27T13:19:44.235454539",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -717,6 +720,7 @@
                         ],
                         "sv_caller": "sniffles",
                         "needs_reheader": false,
+                        "needs_header_repair": true,
                         "skip_vep_prep": false
                     },
                     [
@@ -809,7 +813,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-27T10:34:39.542935459",
+        "timestamp": "2026-11-27T13:16:05.309953117",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
