@@ -12,7 +12,7 @@
                             "test_2"
                         ],
                         "sv_caller": "sniffles",
-                        "needs_reheader": true,
+                        "needs_reheader": false,
                         "skip_vep_prep": false
                     },
                     [
@@ -173,7 +173,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T09:43:13.197292024",
+        "timestamp": "2026-11-27T10:42:09.740433215",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -334,7 +334,7 @@
                             "test_2"
                         ],
                         "sv_caller": "sniffles",
-                        "needs_reheader": true,
+                        "needs_reheader": false,
                         "skip_vep_prep": false
                     },
                     [
@@ -479,7 +479,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T10:51:14.951127267",
+        "timestamp": "2026-11-27T10:43:16.315072969",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -528,7 +528,7 @@
                                 "test_2"
                             ],
                             "sv_caller": "sniffles",
-                            "needs_reheader": true,
+                            "needs_reheader": false,
                             "skip_vep_prep": false
                         },
                         "family.vcf.gz",
@@ -697,7 +697,7 @@
                 ]
             }
         ],
-        "timestamp": "2026-11-26T10:18:13.623418677",
+        "timestamp": "2026-11-27T10:43:37.878907303",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -716,7 +716,7 @@
                             "test_2"
                         ],
                         "sv_caller": "sniffles",
-                        "needs_reheader": true,
+                        "needs_reheader": false,
                         "skip_vep_prep": false
                     },
                     [
@@ -809,7 +809,7 @@
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T08:56:35.472306146",
+        "timestamp": "2026-11-27T10:34:39.542935459",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"

@@ -12,14 +12,14 @@
                             "HG004_Revio"
                         ],
                         "sv_caller": "sniffles",
-                        "needs_reheader": true,
+                        "needs_reheader": false,
                         "skip_vep_prep": false
                     },
                     "beb851c92dcdaacf205d4de8a7ce3079"
                 ]
             ]
         ],
-        "timestamp": "2026-11-24T11:56:32.793461648",
+        "timestamp": "2026-11-27T10:29:44.26913389",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
@@ -38,14 +38,14 @@
                             "HG004_Revio"
                         ],
                         "sv_caller": "sniffles",
-                        "needs_reheader": true,
+                        "needs_reheader": false,
                         "skip_vep_prep": false
                     },
                     "FAM.vcf.gz"
                 ]
             ]
         ],
-        "timestamp": "2026-11-19T13:42:33.447178681",
+        "timestamp": "2026-11-27T10:29:27.047574895",
         "meta": {
             "nf-test": "0.9.5",
             "nextflow": "26.10.6"
